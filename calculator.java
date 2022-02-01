@@ -51,7 +51,7 @@ import java.util.Scanner;
 	      case '5' : System.exit(0);
 	                 break;
 	
-	      default : System.out.print("Wrong Choice!!!");
+	      default : System.out.print("Very Wrong Choice!!!");
 	                break;
 	   }
 																	            System.out.print("\n---------------------------------------\n");
