@@ -1,5 +1,6 @@
 /*This program will show demo on a simple calculator*/
-
+/*This comment will be available from branch2 merge*/
+/*Option5 - Worng choice entered*/
 import java.util.Scanner;
 
  public class calculator
@@ -55,6 +56,8 @@ import java.util.Scanner;
 	                break;
 	   }
 																	            System.out.print("\n---------------------------------------\n");
-	}while(choice != 5);       
+	}while(choice != 5) {
+			  System.out.println("Wrong choice entered");
+	 }
     }
 }
