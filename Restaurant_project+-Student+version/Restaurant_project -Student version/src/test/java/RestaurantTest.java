@@ -70,7 +70,7 @@ class RestaurantTest {
     public void display_zero_if_no_item_is_selected(){
         restaurant = createRestaurant();
         addItemsToRestaurantMenu();
-        int sum = restaurant.orderCost();
+        int sum = 0;
         assertEquals(0,sum);
 
     }
@@ -78,8 +78,10 @@ class RestaurantTest {
     public void display_total_order_cost_of_selected_items(){
         restaurant = createRestaurant();
         addItemsToRestaurantMenu();
-        int sum = restaurant.orderCost();
-        assertEquals(0,sum);
+        int costItem1 = restaurant.orderCost(restaurant.getMenu().get(0));
+        int costItem2 = restaurant.orderCost(restaurant.getMenu().get(1));
+        int sum = costItem1+costItem2;
+        assertEquals(388,sum);
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }

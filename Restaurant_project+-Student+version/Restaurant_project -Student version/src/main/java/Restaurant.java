@@ -68,7 +68,9 @@ public class Restaurant {
         return name;
     }
 
-    public int orderCost() {
-        return -1;
+    public int orderCost(Item itemName) {
+        int sum = 0;
+        sum = itemName.getPrice();
+        return sum;
     }
 }
