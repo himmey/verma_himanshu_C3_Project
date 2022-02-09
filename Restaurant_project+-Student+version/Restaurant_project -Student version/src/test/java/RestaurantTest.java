@@ -57,6 +57,7 @@ class RestaurantTest {
         restaurant.removeFromMenu("Vegetable lasagne");
         assertEquals(initialMenuSize-1,restaurant.getMenu().size());
     }
+
     @Test
     public void removing_item_that_does_not_exist_should_throw_exception() {
         restaurant = createRestaurant();
@@ -64,5 +65,25 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 ()->restaurant.removeFromMenu("French fries"));
     }
+
+    @Test
+    public void display_zero_if_no_item_is_selected(){
+        restaurant = createRestaurant();
+        addItemsToRestaurantMenu();
+        int sum = restaurant.orderCost();
+        assertEquals(0,sum);
+
+    }
+    @Test
+    public void display_total_order_cost_of_selected_items(){
+        restaurant = createRestaurant();
+        addItemsToRestaurantMenu();
+        int sum = restaurant.orderCost();
+        assertEquals(0,sum);
+    }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
+
+//    private void addItemsToRestaurantMenu() {
+//        restaurant.addToMenu("Sweet corn soup",119);
+//        restaurant.addToMenu("Vegetable lasagne", 269);
